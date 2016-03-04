@@ -4,8 +4,6 @@ Copyright (C) 2016 Minjae Seon
 
 Extract Instagram Post's Photo & Video URL, Description, Post URL From OpenGraph Tag
 
-===========================
-
 <h1>License</h1>
 The MIT License (MIT)
 
