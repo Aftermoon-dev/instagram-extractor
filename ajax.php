@@ -27,7 +27,13 @@ require('OpenGraph.php');
 
 if(empty($_POST['url']))
 {
-	die("Empty URL");
+	die("Please Enter Instagram Post URL.");
+}
+
+$urlcheck = strstr($_POST['url'], "instagram.com");
+if($urlcheck === false)
+{
+	die("Please Enter Only Instagram URL.");
 }
 
 $graph = OpenGraph::fetch($_POST['url']);
