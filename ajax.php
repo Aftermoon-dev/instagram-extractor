@@ -43,15 +43,23 @@ $image = $graph->image;
 $urls = $graph->url;
 $video = $graph->video;
 
-echo '<img src=' . $image . ' width="500">';
-echo '<br>';
-echo $des;
-echo '<br>';
-echo 'Photo URL : <a href="' . $image . '" target="_blank">' . $image . '</a>';
-echo '<br>';
-if(!empty($video))
-{
+if(isset($video))
+{	
+	echo '<video src="'. $video .'" controls loop autoplay> </video>';
+	echo '<br>';
+	echo $des;
+	echo '<br>';
+	echo 'Thumbnail URL : <a href="' . $image . '" target="_blank">' . $image . '</a>';
+	echo '<br>';
 	echo 'Video URL : <a href="' . $video . '" target="_blank">' . $video . '</a>';
+	echo '<br>';
+}
+else {
+	echo '<img src=' . $image . ' width="500">';
+	echo '<br>';
+	echo $des;
+	echo '<br>';
+	echo 'Image URL : <a href="' . $image . '" target="_blank">' . $image . '</a>';
 	echo '<br>';
 }
 echo 'Instagram Post URL : <a href="' . $urls . '" target="_blank">' . $urls . '</a>';
